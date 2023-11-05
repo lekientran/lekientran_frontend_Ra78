@@ -8,6 +8,10 @@
     --navbar-height: 50px;
 }
 
+.bg-primary-color{
+    background-color: var(--primary-color);
+}
+
 *{
     box-sizing: inherit;
 }
@@ -50,5 +54,13 @@ html{
         transform: scale(var(--ground-to));
     }
 }
+
+  @keyframes fadeInUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
 
 /* Button */

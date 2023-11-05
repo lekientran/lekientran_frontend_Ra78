@@ -82,7 +82,7 @@ $.ajax({
 }
 
 
-function onSave(){
-    const accountID = $(#idAccountToUpdate).val();
+// function onSave(){
+//     const accountID = $(#idAccountToUpdate).val();
 
-}
+// }
