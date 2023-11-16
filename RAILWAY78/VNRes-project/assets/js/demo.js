@@ -15,7 +15,3 @@ function navToContact(){
 function navToSignIn(){
     $(".container").load("./assets/html/signin.html")
 }
-
-function navToMenu(){
-    $(".container").load("./assets/html/menu.html")
-}

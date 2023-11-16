@@ -88,6 +88,17 @@
     text-align: center;
 }
 
+/* MENU*/
+.menu__header{
+    margin-top: 100px;
+}
+
+.card__cover{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
 .footer__content_header{
     font-size: 2.4rem;
 }

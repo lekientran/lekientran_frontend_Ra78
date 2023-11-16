@@ -88,6 +88,14 @@
     text-align: center;
 }
 
+.menu{
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
 .footer__content_header{
     font-size: 2.4rem;
 }
@@ -100,3 +108,4 @@
     font-size: 3.2rem;
     margin-right: 10px;
 }
+
