@@ -13,38 +13,38 @@ import javax.persistence.Table;
 @Table(name = "`Group`")
 public class Group implements Serializable {
 
-	private static final long serialVersionUID = 1L;
+    private static final long serialVersionUID = 1L;
 
-	@Column(name = "id")
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int id;
+    @Column(name = "id")
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int id;
 
-	@Column(name = "name", length = 50, nullable = false, unique = true)
-	private String name;
+    @Column(name = "name", length = 50, nullable = false, unique = true)
+    private String name;
 
-	public Group() {
-	}
+    public Group() {
+    }
 
-	public int getId() {
-		return id;
-	}
+    public int getId() {
+        return id;
+    }
 
-	public void setId(short id) {
-		this.id = id;
-	}
+    public void setId(short id) {
+        this.id = id;
+    }
 
-	public String getName() {
-		return name;
-	}
+    public String getName() {
+        return name;
+    }
 
-	public void setName(String name) {
-		this.name = name;
-	}
+    public void setName(String name) {
+        this.name = name;
+    }
 
-	@Override
-	public String toString() {
-		return "Group { " + "ID = " + id + ", Name = '" + name + '\'' + '}';
-	}
+    @Override
+    public String toString() {
+        return "Group { " + "ID = " + id + ", Name = '" + name + '\'' + '}';
+    }
 
 }

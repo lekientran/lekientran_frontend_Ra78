@@ -13,14 +13,14 @@ public class Function {
 
     public void getAllAccount() throws SQLException {
         List<Account> accounts = controller.getAllAccount();
-        if (accounts.size() > 0){
+        if (accounts.size() > 0) {
 
             String leftAlignFormat = "| %-3s| %-20s | %-20s | %-20s |%n";
             System.out.format("+----+----------------------+----------------------+----------------------+%n");
             System.out.format("| id |      FullName        |        Email         |         Role         |%n");
             System.out.format("+----+----------------------+----------------------+----------------------+%n");
             for (Account account : accounts) {
-                System.out.format(leftAlignFormat,account.getId(), account.getUsername(),account.getEmail(), account.getRole());
+                System.out.format(leftAlignFormat, account.getId(), account.getUsername(), account.getEmail(), account.getRole());
             }
             System.out.format("+----+----------------------+----------------------+----------------------+%n");
         } else {
@@ -84,29 +84,30 @@ public class Function {
         System.out.println("Mời bạn nhập vào tên cần tìm kiếm!");
         String name = ScannerUtils.inputString();
         Account account = controller.findByName(name);
-        if (account == null){
+        if (account == null) {
             System.out.println("Account không tồn tại!");
         } else {
             System.out.println(account);
         }
     }
+
     public void getById() throws SQLException {
         System.out.println("Mời bạn nhập vào ID cần tìm kiếm!");
         int id = ScannerUtils.inputIntPositive();
         Account account = controller.findById(id);
-        if (account == null){
+        if (account == null) {
             System.out.println("Account không tồn tại!");
         } else {
             String leftAlignFormat = "| %-3s| %-20s | %-20s | %-20s |%n";
             System.out.format("+----+----------------------+----------------------+----------------------+%n");
             System.out.format("| id |      FullName        |        Email         |         Role         |%n");
             System.out.format("+----+----------------------+----------------------+----------------------+%n");
-            System.out.format(leftAlignFormat,account.getId(), account.getUsername(),account.getEmail(), account.getRole());
+            System.out.format(leftAlignFormat, account.getId(), account.getUsername(), account.getEmail(), account.getRole());
             System.out.format("+----+----------------------+----------------------+----------------------+%n");
         }
     }
 
-    public void deleteById(){
+    public void deleteById() {
         System.out.println("Mời bạn nhập vào ID cần tìm kiếm!");
         int id = ScannerUtils.inputIntPositive();
         controller.deleteAccount(id);

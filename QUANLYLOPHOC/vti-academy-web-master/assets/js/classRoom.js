@@ -123,6 +123,7 @@ function chosePageRoom(page) {
     pageNumberZoom = page;
     getListZoom();
 }
+
 function prePageRoom() {
     event.preventDefault()
     pageNumberZoom--;

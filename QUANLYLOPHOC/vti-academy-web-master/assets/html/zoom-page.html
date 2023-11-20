@@ -32,7 +32,7 @@
                             <div class="input-append inner-append">
                                 <input type="text" class="sr-input" id="seachname" placeholder="Search Class Name">
                                 <button class="btn sr-btn append-btn" type="button" id="seachname"
-                                    onclick="seachName()"><i class="fa fa-search"></i></button>
+                                        onclick="seachName()"><i class="fa fa-search"></i></button>
                                 <div class="btn-group hidden-phone" style="float: right;">
                                     <!-- <a data-toggle="dropdown" href="#" class="btn mini blue" aria-expanded="false">
                                         filter <i class="fa fa-angle-down "></i></a>
@@ -42,8 +42,8 @@
                                         <li><a href="#" id="waiting" onclick="filterbyWaiting()">Waiting</a></li>
                                         <li><a href="#" id="accept" onclick="filterbyAccept()">Accept</a></li>
                                     </ul> -->
-                                    <button type="button" class="btn btn-primary" 
-                              onclick="addZoom()">Thêm mới <i class="fa fa-plus ml-2"></i> </button>
+                                    <button type="button" class="btn btn-primary"
+                                            onclick="addZoom()">Thêm mới <i class="fa fa-plus ml-2"></i></button>
                                 </div>
                             </div>
                         </form>
@@ -52,17 +52,17 @@
                 </form>
                 <table class="table">
                     <thead>
-                        <tr>
-                            <th>STT</th>
-                            <th>Tên zoom</th>
-                            <th>Link</th>
-                            <th>Meeting Id</th>
-                            <th>Pass code</th>
-                            <th>Description</th>
-                        </tr>
+                    <tr>
+                        <th>STT</th>
+                        <th>Tên zoom</th>
+                        <th>Link</th>
+                        <th>Meeting Id</th>
+                        <th>Pass code</th>
+                        <th>Description</th>
+                    </tr>
                     </thead>
                     <tbody>
-                        <!-- data  -->
+                    <!-- data  -->
                     </tbody>
 
                 </table>
@@ -107,7 +107,7 @@
 
 <!---------------------------------------- Modal Update-Create ----------------------------------------->
 <div class="modal fade" id="zoomModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-    aria-hidden="true">
+     aria-hidden="true">
     <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
             <div class="modal-header">
@@ -124,58 +124,62 @@
                             <div class="table-responsive">
                                 <table class="table">
                                     <thead>
-                                        <tr>
-                                            <li>
-                                                <input type="hidden" id="zoomIdToSave" name="id">
-                                                <span>
+                                    <tr>
+                                        <li>
+                                            <input type="hidden" id="zoomIdToSave" name="id">
+                                            <span>
                                                     <b class="text-dark">
                                                         Tên zoom :
                                                     </b>
                                                 </span>
-                                                <input type="text" class="form-control input text-secondary"
-                                                    name="studentNumber" placeholder="Nhập tên zoom" id="zoomName"
-                                                    required>
-                                            </li>
+                                            <input type="text" class="form-control input text-secondary"
+                                                   name="studentNumber" placeholder="Nhập tên zoom" id="zoomName"
+                                                   required>
+                                        </li>
 
-                                            <br>
-                                            <li>
-                                                <b class="text-dark">Link : </b>
-                                                <input type="text" class="form-control input text-secondary"
-                                                    name="studentNumber" placeholder="Nhập link zoom" id="linkZoom" required>
-                                            </li>
-                                            <br>
-                                            <li>
-                                                <b class="text-dark">Meeting Id : </b>
-                                                <input type="text" class="form-control input text-secondary"
-                                                    name="studentNumber" placeholder="Nhập meeting id" id="meetingId" required>
-                                            </li>
-                                            <br>
-                                            <li>
-                                                <b class="text-dark">Pass Code : </b>
-                                                <input type="text" class="form-control input text-secondary"
-                                                    name="studentNumber" placeholder="Nhập pass code zoom" id="passCode" required>
-                                            </li>
-                                            <br>
-                                            <li>
-                                                <b class="text-dark">Các lớp đang sử dụng zoom : </b>
-                                                <p id="classUseZoom"></p></li>
-                                            </li>
-                                            <br>
-                                            <li>
-                                                <b class="text-dark">Mô tả : </b>
-                                                <input type="text" class="form-control input text-secondary"
-                                                    name="studentNumber" placeholder="Nhập mô tả" id="zoomDescription" required>
-                                            </li>
-                                            <br>
-                                            <!-- <br>
-                                            <li>Meeting Id : <span contentEditable="true" id="meetingId"></span> </li>
-                                            <br>
-                                            <li>Pass Code : <span contentEditable="true" id="passCode"></span> </li>
-                                            <br>
-                                            <li>Các lớp đang sử dụng zoom : <span id="classUseZoom"></span></li>
-                                            <br>
-                                            <li>Mô tả : <span contentEditable="true" id="zoomDescription"></span></li> -->
-                                        </tr>
+                                        <br>
+                                        <li>
+                                            <b class="text-dark">Link : </b>
+                                            <input type="text" class="form-control input text-secondary"
+                                                   name="studentNumber" placeholder="Nhập link zoom" id="linkZoom"
+                                                   required>
+                                        </li>
+                                        <br>
+                                        <li>
+                                            <b class="text-dark">Meeting Id : </b>
+                                            <input type="text" class="form-control input text-secondary"
+                                                   name="studentNumber" placeholder="Nhập meeting id" id="meetingId"
+                                                   required>
+                                        </li>
+                                        <br>
+                                        <li>
+                                            <b class="text-dark">Pass Code : </b>
+                                            <input type="text" class="form-control input text-secondary"
+                                                   name="studentNumber" placeholder="Nhập pass code zoom" id="passCode"
+                                                   required>
+                                        </li>
+                                        <br>
+                                        <li>
+                                            <b class="text-dark">Các lớp đang sử dụng zoom : </b>
+                                            <p id="classUseZoom"></p></li>
+                                        </li>
+                                        <br>
+                                        <li>
+                                            <b class="text-dark">Mô tả : </b>
+                                            <input type="text" class="form-control input text-secondary"
+                                                   name="studentNumber" placeholder="Nhập mô tả" id="zoomDescription"
+                                                   required>
+                                        </li>
+                                        <br>
+                                        <!-- <br>
+                                        <li>Meeting Id : <span contentEditable="true" id="meetingId"></span> </li>
+                                        <br>
+                                        <li>Pass Code : <span contentEditable="true" id="passCode"></span> </li>
+                                        <br>
+                                        <li>Các lớp đang sử dụng zoom : <span id="classUseZoom"></span></li>
+                                        <br>
+                                        <li>Mô tả : <span contentEditable="true" id="zoomDescription"></span></li> -->
+                                    </tr>
                                     </thead>
                                 </table>
                             </div>
@@ -195,7 +199,7 @@
 <!---------------------------------------- Modal Delete ----------------------------------------->
 
 <div class="modal fade" id="confirmDeleteZoom" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-    aria-hidden="true">
+     aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">

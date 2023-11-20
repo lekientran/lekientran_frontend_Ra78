@@ -35,11 +35,12 @@ async function getListClass() {
     fetch('./assets/data/class.json')
         .then((response) => response.json())
         .then((json) => {
-            filltoTable(json.content);
-            buildPaginationClass(json.number + 1, json.totalPages);
-        }
+                filltoTable(json.content);
+                buildPaginationClass(json.number + 1, json.totalPages);
+            }
         );
 }
+
 function filltoTable(json) {
     if (json) {
         classList = json;
@@ -130,6 +131,7 @@ function chosePageClass(page) {
     pageNumberClass = page;
     getListClass();
 }
+
 function prePageClass() {
     event.preventDefault()
     pageNumberClass--;
@@ -142,12 +144,12 @@ function nextPageClass() {
     getListClass();
 }
 
-function addClass(){
+function addClass() {
     resetFromEditClass();
     $('#classModal').modal('show')
 }
 
-function editClass(classId){
+function editClass(classId) {
     let class_ = classList.find(class_ => class_.id === classId)
     console.log(classList, class_);
     resetFromEditClass();
@@ -185,7 +187,7 @@ function saveClass() {
     showAlrtSuccess(text);
 }
 
-function resetFromEditClass(){
+function resetFromEditClass() {
     $('#ac-id').val("");
     $('#ac-username').val("");
     $('#ac-fullName').val("");
@@ -212,20 +214,20 @@ function deleteClass() {
     showAlrtSuccess("Xoá account thành công!");
 }
 
-function viewStudent(classId){
+function viewStudent(classId) {
     console.log(classId)
     // Call API lấy danh sách Account theo classId
     // fake
     fetch('./assets/data/account.json')
         .then((response) => response.json())
         .then((json) => {
-            fillAccountToTable(json.content);
-        }
+                fillAccountToTable(json.content);
+            }
         );
     $('#viewStudent').modal('show')
 }
 
-function fillAccountToTable(accounts){
+function fillAccountToTable(accounts) {
     var index = 1;
     $('#table-account').empty()
     accounts.forEach(function (item) {
@@ -246,68 +248,68 @@ function fillAccountToTable(accounts){
 }
 
 // ------------------------------ Build form add class ----------------------------------
-function buildMentorToForm(){
+function buildMentorToForm() {
     // -------------------- CALL API Get All Account is Mentor ----------------
     // Fake:
     fetch('./assets/data/account.json')
-    .then((response) => response.json())
-    .then((json) => {
-        let data = json.content.filter(x => x.role === 'MENTOR');
-        fillMentorToForm(data);
-    }
-    );
+        .then((response) => response.json())
+        .then((json) => {
+                let data = json.content.filter(x => x.role === 'MENTOR');
+                fillMentorToForm(data);
+            }
+        );
 }
 
-function fillMentorToForm(data){
-    if(data){
+function fillMentorToForm(data) {
+    if (data) {
         $('#cl-mentor').empty();
         data.forEach(function (item) {
             $('#cl-mentor').append(
-                `<option value="`+item.id +`">`+item.fullName+`</option>`
+                `<option value="` + item.id + `">` + item.fullName + `</option>`
             )
         });
     }
 }
 
-function buildClassRoomToForm(){
+function buildClassRoomToForm() {
     // -------------------- CALL API Get All Class Room ----------------
     // Fake:
     fetch('./assets/data/class-room.json')
-    .then((response) => response.json())
-    .then((json) => {
-        fillClassRoomToForm(json.content);
-    }
-    );
+        .then((response) => response.json())
+        .then((json) => {
+                fillClassRoomToForm(json.content);
+            }
+        );
 }
 
-function fillClassRoomToForm(data){
-    if(data){
+function fillClassRoomToForm(data) {
+    if (data) {
         $('#cl-classRoomId').empty();
         data.forEach(function (item) {
             $('#cl-classRoomId').append(
-                `<option value="`+item.id +`">`+item.name+`</option>`
+                `<option value="` + item.id + `">` + item.name + `</option>`
             )
         });
     }
 }
 
-function buildZoomToForm(){
+function buildZoomToForm() {
     // -------------------- CALL API Get All Zoom ----------------
     // Fake:
     fetch('./assets/data/zoom.json')
-    .then((response) => response.json())
-    .then((json) => {
-        fillZoomToForm(json.content);
-    }
-    );
+        .then((response) => response.json())
+        .then((json) => {
+                fillZoomToForm(json.content);
+            }
+        );
 }
 
-function fillZoomToForm(data){
-    if(data){
+function fillZoomToForm(data) {
+    if (data) {
         $('#cl-zoomId').empty();
         data.forEach(function (item) {
             $('#cl-zoomId').append(
-                `<option value="`+item.id +`">`+item.name+`</option>`
+                `<option value="` + item.id + `">` + item.name + `</option>`
             )
         });
     }

@@ -5,12 +5,12 @@ let pageNumberAccount = 1;
 let sortBy_Account = "id";
 let sortType_Account = "asc";
 
-function SearchAccountRequest(pageSize, pageNumber, sortBy, sortType){
+function SearchAccountRequest(pageSize, pageNumber, sortBy, sortType) {
     this.pageSize = pageSize;
     this.pageNumber = pageNumber;
     this.sortBy = sortBy;
     this.sortType = sortType;
-    }
+}
 
 $(function () {
     console.log(13123)
@@ -18,37 +18,38 @@ $(function () {
     buildClassList();
 })
 
-function buildClassList(){
+function buildClassList() {
     classList = [];
     getClassList();
 }
 
-function getClassList(){
+function getClassList() {
     // -------------------------------- CALL API GET ALL CLASS -------------------
 
 }
 
-function buildAccountPage(){
+function buildAccountPage() {
     accounts = [];
     getListAccount();
     fetch('./assets/data/class.json')
-    .then((response) => response.json())
-    .then((json) =>{
-        fillClassToForm(json.content);
-    }
-    );
+        .then((response) => response.json())
+        .then((json) => {
+                fillClassToForm(json.content);
+            }
+        );
 }
 
-function fillClassToForm(data){
-    if(data){
+function fillClassToForm(data) {
+    if (data) {
         classList = data;
     }
     classList.forEach(function (item) {
         $('#ac-class').append(
-            `<option value="`+item.id +`">`+item.className+`</option>`
+            `<option value="` + item.id + `">` + item.className + `</option>`
         )
     });
 }
+
 // gọi api GetAllZoom
 async function getListAccount() {
     let request = new SearchAccountRequest(pageSizeAccount, pageNumberAccount, sortBy_Account, sortType_Account);
@@ -65,15 +66,15 @@ async function getListAccount() {
     // });
     fetch('./assets/data/account.json')
         .then((response) => response.json())
-        .then((json) =>{
-            fillAccountToTable(json.content);
-            buildPaginationAccount(json.number + 1, json.totalPages);
-        }
+        .then((json) => {
+                fillAccountToTable(json.content);
+                buildPaginationAccount(json.number + 1, json.totalPages);
+            }
         );
 }
 
 function fillAccountToTable(json) {
-    if(json){
+    if (json) {
         accounts = json;
     }
     // check form trống để k lặp lại khi chuyền data
@@ -94,10 +95,10 @@ function fillAccountToTable(json) {
             '<td><a target="_blank" href=' + '"' + item.facebook + '"> ' + item.facebook + '<a/></td>' +
 
             '<td>' +
-            '<a class="edit" title="go to  detail" data-toggle="tooltip" onclick="editAccount(' + 
+            '<a class="edit" title="go to  detail" data-toggle="tooltip" onclick="editAccount(' +
             item.id + ')"><i class="ti-pencil m-1 text-warning" style="font-size:24px"></i></a>' +
 
-            '<a class="edit" title="go to  detail" data-toggle="tooltip" onclick="confirmDeleteAccount(' + 
+            '<a class="edit" title="go to  detail" data-toggle="tooltip" onclick="confirmDeleteAccount(' +
             item.id + ')"><i class="ti-trash m-1 text-danger" style="font-size:24px"></i></a>' +
             '</td>' +
             '</tr>'
@@ -129,9 +130,9 @@ function buildPaginationAccount(number, totalPages) {
     // Dùng hàm for để build ra số trang. Kiểm tra xem trang hiện tại là bao nhiêu thì background vàng
     for (let index = 1; index <= totalPages; index++) {
         if (number === (index)) {
-            $('#pagination-account').append(`<li class="page-item "><a class="page-link bg-primary" href="#" onclick="chosePageAccount(` + index + `)">`+index+`</a></li>`);
+            $('#pagination-account').append(`<li class="page-item "><a class="page-link bg-primary" href="#" onclick="chosePageAccount(` + index + `)">` + index + `</a></li>`);
         } else {
-            $('#pagination-account').append(`<li class="page-item"><a class="page-link" href="#" onclick="chosePageAccount(` + index + `)">`+index+`</a></li>`);
+            $('#pagination-account').append(`<li class="page-item"><a class="page-link" href="#" onclick="chosePageAccount(` + index + `)">` + index + `</a></li>`);
         }
     }
 
@@ -160,6 +161,7 @@ function chosePageAccount(page) {
     pageNumberAccount = page;
     getListAccount();
 }
+
 function prePageAccount() {
     event.preventDefault()
     pageNumberAccount--;
@@ -172,12 +174,12 @@ function nextPageAccount() {
     getListAccount();
 }
 
-function addAccount(){
+function addAccount() {
     resetFromEditAccount();
     $('#accountModal').modal('show')
 }
 
-function editAccount(accountId){
+function editAccount(accountId) {
     let account = accounts.find(account => account.id === accountId)
     console.log(account);
     resetFromEditAccount();
@@ -215,7 +217,7 @@ function saveAccount() {
     showAlrtSuccess(text);
 }
 
-function resetFromEditAccount(){
+function resetFromEditAccount() {
     $('#ac-id').val("");
     $('#ac-username').val("");
     $('#ac-fullName').val("");

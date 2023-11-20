@@ -32,10 +32,10 @@
                             <div class="input-append inner-append">
                                 <input type="text" class="sr-input" id="seachname" placeholder="Search Class Name">
                                 <button class="btn sr-btn append-btn" type="button" id="seachname"
-                                    onclick="seachName()"><i class="fa fa-search"></i></button>
+                                        onclick="seachName()"><i class="fa fa-search"></i></button>
                                 <div class="btn-group hidden-phone" style="float: right;">
                                     <button type="button" class="btn btn-primary" onclick="addAccount()">Thêm mới <i
-                                            class="fa fa-plus ml-2"></i> </button>
+                                            class="fa fa-plus ml-2"></i></button>
                                 </div>
                             </div>
                         </form>
@@ -44,20 +44,20 @@
                 </form>
                 <table class="table">
                     <thead>
-                        <tr>
-                            <th>STT</th>
-                            <th>User</th>
-                            <th>Ngày sinh</th>
-                            <th>Địa chỉ</th>
-                            <th>Tên đầy đủ</th>
-                            <th>Role</th>
-                            <th>Số điện thoại</th>
-                            <th>Mail</th>
-                            <th>Facebook</th>
-                        </tr>
+                    <tr>
+                        <th>STT</th>
+                        <th>User</th>
+                        <th>Ngày sinh</th>
+                        <th>Địa chỉ</th>
+                        <th>Tên đầy đủ</th>
+                        <th>Role</th>
+                        <th>Số điện thoại</th>
+                        <th>Mail</th>
+                        <th>Facebook</th>
+                    </tr>
                     </thead>
                     <tbody>
-                        <!-- data  -->
+                    <!-- data  -->
                     </tbody>
 
                 </table>
@@ -87,7 +87,7 @@
 
 <!---------------------------------------- Modal Update-Create Account----------------------------------------->
 <div class="modal fade" id="accountModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-    aria-hidden="true">
+     aria-hidden="true">
     <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
             <div class="modal-header">
@@ -106,27 +106,27 @@
                             <label class="col-lg-4 col-form-label" for="val-username">User Name <span
                                     class="text-danger">*</span></label>
                             <input type="text" class="form-control" id="ac-username" name="className"
-                                placeholder="Nhập username" required maxlength="30" minlength="6">
+                                   placeholder="Nhập username" required maxlength="30" minlength="6">
                         </div>
                         <div class="col-md-6">
                             <label class="col-lg-4 col-form-label" for="val-username">Full name <span
                                     class="text-danger">*</span></label>
                             <input type="text" class="form-control" id="ac-fullName" name="startDate"
-                                placeholder="Nhập tên đầy đủ" required>
+                                   placeholder="Nhập tên đầy đủ" required>
                         </div>
                         <!-- ----------2-------- -->
                         <div class="col-md-6">
                             <label class="col-lg-4 col-form-label" for="val-username">Ngày sinh <span
                                     class="text-danger">*</span></label>
                             <input type="date" class="form-control" id="ac-birthDay" name="endDate"
-                                placeholder="dd-mm-yyyy" required>
+                                   placeholder="dd-mm-yyyy" required>
                         </div>
 
                         <div class="col-md-6">
                             <label class="col-lg-6 col-form-label" for="val-username">Số điện thoại<span
                                     class="text-danger">*</span></label>
                             <input type="text" class="form-control" id="ac-phoneNumber" name="studentNumber"
-                                placeholder="Nhập số điện thoại" required>
+                                   placeholder="Nhập số điện thoại" required>
                         </div>
                         <!-- ----------3-------- -->
                         <div class="col-md-6">
@@ -143,24 +143,24 @@
                             <label class="col-lg-4 col-form-label" for="val-username">Địa chỉ <span
                                     class="text-danger">*</span></label>
                             <input type="text" class="form-control" id="ac-address" name="description"
-                                placeholder="Nhập địa chỉ" required>
+                                   placeholder="Nhập địa chỉ" required>
                         </div>
                         <!-- ----------4-------- -->
                         <div class="col-md-6">
                             <label class="col-lg-6 col-form-label" for="val-username">Email<span
                                     class="text-danger">*</span></label>
                             <input type="text" class="form-control" id="ac-email" name="studentNumber"
-                                placeholder="Nhập email" required>
+                                   placeholder="Nhập email" required>
                         </div>
 
                         <div class="col-md-6">
                             <label class="col-lg-6 col-form-label" for="val-username">Facebook<span
                                     class="text-danger">*</span></label>
                             <input type="text" class="form-control" id="ac-facebook" name="studentNumber"
-                                placeholder="Nhập link facebook" required>
+                                   placeholder="Nhập link facebook" required>
                         </div>
-                         <!-- ----------5-------- -->
-                         <div class="col-md-6">
+                        <!-- ----------5-------- -->
+                        <div class="col-md-6">
                             <label class="col-lg-6 col-form-label" for="val-username">Lớp học</label>
                             <select class="form-control" id="ac-class" name="teachingForm">
                                 <option value="">Chưa có lớp học hoặc không phải học viên</option>
@@ -170,7 +170,7 @@
                         <div class="col-12">
                             <label class="col-lg-6 col-form-label" for="ac-information">Thôn tin người dùng</label>
                             <textarea id="ac-information" class="form-control input text-secondary" name="w3review"
-                                rows="4" cols="50" style="height: 80px;" placeholder="Nhập thông tin người dùng">
+                                      rows="4" cols="50" style="height: 80px;" placeholder="Nhập thông tin người dùng">
                             </textarea>
                         </div>
                     </form>
@@ -188,7 +188,7 @@
 
 <!---------------------------------------- Modal Delete ----------------------------------------->
 <div class="modal fade" id="confirmDeleteAccount" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-    aria-hidden="true">
+     aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">

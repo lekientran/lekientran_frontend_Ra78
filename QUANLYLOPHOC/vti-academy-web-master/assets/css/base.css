@@ -1,9 +1,9 @@
-.acctive-link{
-background-color: #007bff !important;
-color: aliceblue !important;
+.acctive-link {
+    background-color: #007bff !important;
+    color: aliceblue !important;
 }
 
-.input{
+.input {
     border-radius: 0.25rem !important;
     height: 32px;
     font-size: small;

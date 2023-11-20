@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class ScannerUtils {
     static Scanner scanner = new Scanner(System.in);
 
-    public static int inputIntPositive(){
+    public static int inputIntPositive() {
         while (true) {
             try {
                 int intPositive = Integer.parseInt(scanner.nextLine());
@@ -30,8 +30,8 @@ public class ScannerUtils {
             }
         }
     }
-    
-    public static String inputEmail(){
+
+    public static String inputEmail() {
         while (true) {
             String string = scanner.nextLine().trim();
             if (string.isEmpty()) {
@@ -44,7 +44,7 @@ public class ScannerUtils {
         }
     }
 
-    public static String inputPasswords(){
+    public static String inputPasswords() {
         while (true) {
             String string = scanner.nextLine().trim();
             if (string.isEmpty()) {
@@ -57,7 +57,7 @@ public class ScannerUtils {
         }
     }
 
-    public static int inputNumber(int min, int max){
+    public static int inputNumber(int min, int max) {
         while (true) {
             try {
                 int number = Integer.parseInt(scanner.nextLine());

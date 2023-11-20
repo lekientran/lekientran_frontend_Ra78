@@ -10,53 +10,53 @@ import com.vti.utils.HibernateUtils;
 
 public class UserRepository {
 
-	private HibernateUtils hibernateUtils;
+    private HibernateUtils hibernateUtils;
 
-	public UserRepository() {
-		hibernateUtils = HibernateUtils.getInstance();
-	}
+    public UserRepository() {
+        hibernateUtils = HibernateUtils.getInstance();
+    }
 
-	@SuppressWarnings("unchecked")
-	public List<User> getAllUsers() {
+    @SuppressWarnings("unchecked")
+    public List<User> getAllUsers() {
 
-		Session session = null;
+        Session session = null;
 
-		try {
+        try {
 
-			// get session
-			session = hibernateUtils.openSession();
+            // get session
+            session = hibernateUtils.openSession();
 
-			// create hql query
-			Query<User> query = session.createQuery("FROM User");
+            // create hql query
+            Query<User> query = session.createQuery("FROM User");
 
-			return query.list();
+            return query.list();
 
-		} finally {
-			if (session != null) {
-				session.close();
-			}
-		}
-	}
+        } finally {
+            if (session != null) {
+                session.close();
+            }
+        }
+    }
 
-	public void createUser(User user) {
+    public void createUser(User user) {
 
-		Session session = null;
+        Session session = null;
 
-		try {
+        try {
 
-			// get session
-			session = hibernateUtils.openSession();
-			session.beginTransaction();
+            // get session
+            session = hibernateUtils.openSession();
+            session.beginTransaction();
 
-			// create
-			session.save(user);
-			session.getTransaction().commit();
+            // create
+            session.save(user);
+            session.getTransaction().commit();
 
-		} finally {
-			if (session != null) {
-				session.close();
-			}
-		}
-	}
+        } finally {
+            if (session != null) {
+                session.close();
+            }
+        }
+    }
 
 }

@@ -20,7 +20,7 @@ public class Program {
             System.out.println("5. Xoá Account theo Id");
             System.out.println("6. Thoát");
 
-            menu = ScannerUtils.inputNumber(1,6);
+            menu = ScannerUtils.inputNumber(1, 6);
             switch (menu) {
                 case 1:
                     function.getAllAccount();

@@ -8,8 +8,9 @@ import com.vti.entity.Account;
 import java.sql.SQLException;
 import java.util.List;
 
-public class AccountService implements IAccountService{
+public class AccountService implements IAccountService {
     IAccountRepository repository = new AccountRepository();
+
     @Override
     public List<Account> getAllAccount() throws SQLException {
         return repository.getAllAccount();

@@ -6,25 +6,25 @@ import org.hibernate.Session;
 import com.vti.entity.Group;
 
 public class TestHibernateProgram {
-	
-	public static void main(String[] args) {
-		// get session
-		Session session = null;
-		try {
-			session = HibernateUtils.buildSessionFactory().openSession();
 
-			Group group = new Group();
-			group.setName("SQL");
+    public static void main(String[] args) {
+        // get session
+        Session session = null;
+        try {
+            session = HibernateUtils.buildSessionFactory().openSession();
 
-			session.save(group);
+            Group group = new Group();
+            group.setName("SQL");
 
-			System.out.println("Create success!");
+            session.save(group);
 
-		} finally {
-			if (session != null) {
-				session.close();
-			}
-		}
-	}
+            System.out.println("Create success!");
+
+        } finally {
+            if (session != null) {
+                session.close();
+            }
+        }
+    }
 
 }

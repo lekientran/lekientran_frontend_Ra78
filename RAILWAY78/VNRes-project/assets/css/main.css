@@ -1,15 +1,15 @@
-.header{
+.header {
     /* height: var(--navbar-height); */
     background-image: linear-gradient(#F53D2D, #FF6533);
 }
 
-.header__navbar{
+.header__navbar {
     height: var(--navbar-height);
     display: flex;
     justify-content: space-between;
 }
 
-.header__navbar-list{
+.header__navbar-list {
     list-style: none;
     display: inline-block;
     justify-content: space-between;
@@ -17,56 +17,60 @@
 }
 
 .header__navbar-item,
-.header__navbar-item-link{
+.header__navbar-item-link {
     display: inline-block;
     font-size: 2.0rem;
     text-decoration: none;
     color: var(--black-color);
     margin: 0 8px;
-    
-    
+
+
 }
 
-.header__navbar-item{
+.header__navbar-item {
     position: relative;
 }
-.header__navbar-logo{
+
+.header__navbar-logo {
     height: 50px;
     top: 0;
 }
+
 .header__navbar-item:hover,
-.header__navbar-item-link:hover{
+.header__navbar-item-link:hover {
     cursor: pointer;
-    
+
     color: rgba(20, 19, 19, 0.384);
 }
 
-.header__navbar-item--separate::after{
+.header__navbar-item--separate::after {
     content: "";
     display: block;
     position: absolute;
     height: 8px;
     width: 2px;
-    background-color:var(--black-color);
+    background-color: var(--black-color);
     top: 16px;
     right: -10px;
 }
 
-.container__header{
+.container__header {
     width: 100%;
     text-align: center;
     margin-bottom: 20px;
-   
-}
-.container__header_content{
-    font-size: 2.4rem;
-    font-weight:bolder;
+
 }
 
-.container__body_img{
+.container__header_content {
+    font-size: 2.4rem;
+    font-weight: bolder;
+}
+
+.container__body_img {
     height: 400px;
 }
-.container__body_content{
+
+.container__body_content {
     font-size: 2.4rem;
     color: var(--black-color);
 }
@@ -75,39 +79,39 @@
     animation: fadeInUp 1.5s linear forwards;
     opacity: 0;
     transform: translateY(50px);
-  }
+}
 
-  .animate-fade {
+.animate-fade {
     animation: fadeIn 1.5s ease-in forwards;
     opacity: 0;
     transform: translateY(50px);
-  }
-  
-  
-.content__center{
+}
+
+
+.content__center {
     text-align: center;
 }
 
 /* MENU*/
-.menu__header{
+.menu__header {
     margin-top: 100px;
 }
 
-.card__cover{
+.card__cover {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
 }
 
-.footer__content_header{
+.footer__content_header {
     font-size: 2.4rem;
 }
 
-.footer__content_body{
+.footer__content_body {
     font-size: 1.8rem;
 }
 
-.fab{
+.fab {
     font-size: 3.2rem;
     margin-right: 10px;
 }

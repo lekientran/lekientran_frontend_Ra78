@@ -4,12 +4,13 @@ let pageNumberZoom = 1;
 let sortBy = "id";
 let sortType = "asc";
 
-function SearchZoomRequest(pageSizeZoom, pageNumberZoom, sortBy, sortType){
-this.pageSize = pageSizeZoom;
-this.pageNumber = pageNumberZoom;
-this.sortBy = sortBy;
-this.sortType = sortType;
+function SearchZoomRequest(pageSizeZoom, pageNumberZoom, sortBy, sortType) {
+    this.pageSize = pageSizeZoom;
+    this.pageNumber = pageNumberZoom;
+    this.sortBy = sortBy;
+    this.sortType = sortType;
 }
+
 $(function () {
     console.log(13123)
     buildZoomPage();
@@ -38,9 +39,9 @@ async function getListAccount() {
     fetch('./assets/data/zoom.json')
         .then((response) => response.json())
         .then((json) => {
-            fillZoomToTable(json.content);
-            buildPaginationZoom(json.number + 1, json.totalPages);
-        }
+                fillZoomToTable(json.content);
+                buildPaginationZoom(json.number + 1, json.totalPages);
+            }
         );
 }
 
@@ -96,9 +97,9 @@ function buildPaginationZoom(number, totalPages) {
     // Dùng hàm for để build ra số trang. Kiểm tra xem trang hiện tại là bao nhiêu thì background vàng
     for (let index = 1; index <= totalPages; index++) {
         if (number === (index)) {
-            $('#pagination-zoom').append(`<li class="page-item "><a class="page-link bg-primary" href="#" onclick="chosePageZoom(` + index + `)">`+index+`</a></li>`);
+            $('#pagination-zoom').append(`<li class="page-item "><a class="page-link bg-primary" href="#" onclick="chosePageZoom(` + index + `)">` + index + `</a></li>`);
         } else {
-            $('#pagination-zoom').append(`<li class="page-item"><a class="page-link" href="#" onclick="chosePageZoom(` + index + `)">`+index+`</a></li>`);
+            $('#pagination-zoom').append(`<li class="page-item"><a class="page-link" href="#" onclick="chosePageZoom(` + index + `)">` + index + `</a></li>`);
         }
     }
 
@@ -127,6 +128,7 @@ function chosePageZoom(page) {
     pageNumberZoom = page;
     getListZoom();
 }
+
 function prePageZoom() {
     event.preventDefault()
     pageNumberZoom--;

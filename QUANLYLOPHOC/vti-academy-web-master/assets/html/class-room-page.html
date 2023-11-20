@@ -32,7 +32,7 @@
                             <div class="input-append inner-append">
                                 <input type="text" class="sr-input" id="seachname" placeholder="Search Class Name">
                                 <button class="btn sr-btn append-btn" type="button" id="seachname"
-                                    onclick="seachName()"><i class="fa fa-search"></i></button>
+                                        onclick="seachName()"><i class="fa fa-search"></i></button>
                                 <div class="btn-group hidden-phone" style="float: right;">
                                     <!-- <a data-toggle="dropdown" href="#" class="btn mini blue" aria-expanded="false">
                                         filter <i class="fa fa-angle-down "></i></a>
@@ -41,8 +41,8 @@
                                         <li><a href="#" id="waiting" onclick="filterbyWaiting()">Waiting</a></li>
                                         <li><a href="#" id="accept" onclick="filterbyAccept()">Accept</a></li>
                                     </ul> -->
-                                    <button type="button" class="btn btn-primary" 
-                              onclick="addRoom()">Thêm mới <i class="fa fa-plus ml-2"></i> </button>
+                                    <button type="button" class="btn btn-primary"
+                                            onclick="addRoom()">Thêm mới <i class="fa fa-plus ml-2"></i></button>
                                 </div>
                             </div>
                         </form>
@@ -51,17 +51,17 @@
                 </form>
                 <table class="table">
                     <thead>
-                        <tr>
-                            <th>STT</th>
-                            <th>Tên phòng học</th>
-                            <th>Địa chỉ</th>
-                            <th>Sức chứa</th>
-                            <th>Ghi chú</th>
-                            <th></th>
-                        </tr>
+                    <tr>
+                        <th>STT</th>
+                        <th>Tên phòng học</th>
+                        <th>Địa chỉ</th>
+                        <th>Sức chứa</th>
+                        <th>Ghi chú</th>
+                        <th></th>
+                    </tr>
                     </thead>
                     <tbody>
-                        <!-- data  -->
+                    <!-- data  -->
                     </tbody>
 
                 </table>
@@ -105,7 +105,7 @@
 
 <!---------------------------------------- Modal Update-Create Room----------------------------------------->
 <div class="modal fade" id="roomModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-    aria-hidden="true">
+     aria-hidden="true">
     <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
             <div class="modal-header">
@@ -122,42 +122,46 @@
                             <div class="table-responsive">
                                 <table class="table">
                                     <thead>
-                                        <tr>
-                                            <li>
-                                                <input type="hidden" id="roomIdToSave" name="id">
-                                                <span>
+                                    <tr>
+                                        <li>
+                                            <input type="hidden" id="roomIdToSave" name="id">
+                                            <span>
                                                     <b class="text-dark">
                                                         Tên phòng học:
                                                     </b>
                                                 </span>
-                                                <input type="text" class="form-control input text-secondary"
-                                                    name="studentNumber" placeholder="nhập tên phòng học" id="roomName"
-                                                    required>
-                                            </li>
+                                            <input type="text" class="form-control input text-secondary"
+                                                   name="studentNumber" placeholder="nhập tên phòng học" id="roomName"
+                                                   required>
+                                        </li>
 
-                                            <br>
-                                            <li>
-                                                <b class="text-dark">Địa chỉ : </b>
-                                                <input type="text" class="form-control input text-secondary"
-                                                    name="studentNumber" placeholder="Nhập địa chỉ phòng học" id="roomAddress" required>
-                                            </li>
-                                            <br>
-                                            <li>
-                                                <b class="text-dark">Sức chứa : </b>
-                                                <input type="text" class="form-control input text-secondary"
-                                                    name="studentNumber" placeholder="Nhập sức chứa" id="roomSize" required>
-                                            </li>
-                                            <br>
-                                            <li>
-                                                <b class="text-dark">Ghi chú : </b>
-                                                <!-- <input type="text" class="form-control input text-secondary"
-                                                    name="studentNumber" placeholder="input name" id="roomNote" required> -->
-                                                    <textarea id="roomNote" class="form-control input text-secondary" name="w3review" 
-                                                    rows="4" cols="50" style="height: 160px;" placeholder="Nhập ghi chú">
+                                        <br>
+                                        <li>
+                                            <b class="text-dark">Địa chỉ : </b>
+                                            <input type="text" class="form-control input text-secondary"
+                                                   name="studentNumber" placeholder="Nhập địa chỉ phòng học"
+                                                   id="roomAddress" required>
+                                        </li>
+                                        <br>
+                                        <li>
+                                            <b class="text-dark">Sức chứa : </b>
+                                            <input type="text" class="form-control input text-secondary"
+                                                   name="studentNumber" placeholder="Nhập sức chứa" id="roomSize"
+                                                   required>
+                                        </li>
+                                        <br>
+                                        <li>
+                                            <b class="text-dark">Ghi chú : </b>
+                                            <!-- <input type="text" class="form-control input text-secondary"
+                                                name="studentNumber" placeholder="input name" id="roomNote" required> -->
+                                            <textarea id="roomNote" class="form-control input text-secondary"
+                                                      name="w3review"
+                                                      rows="4" cols="50" style="height: 160px;"
+                                                      placeholder="Nhập ghi chú">
                                                     </textarea>
-                                            </li>
-                                            <br>
-                                        </tr>
+                                        </li>
+                                        <br>
+                                    </tr>
                                     </thead>
                                 </table>
                             </div>
@@ -176,7 +180,7 @@
 
 <!---------------------------------------- Modal Delete ----------------------------------------->
 <div class="modal fade" id="confirmDeleteRoom" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-    aria-hidden="true">
+     aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">

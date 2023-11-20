@@ -15,61 +15,61 @@ import javax.persistence.Table;
 @Table(name = "`Address`")
 public class Address implements Serializable {
 
-	private static final long serialVersionUID = 1L;
+    private static final long serialVersionUID = 1L;
 
-	@Column(name = "id")
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int id;
+    @Column(name = "id")
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int id;
 
-	@Column(name = "street", length = 50, nullable = false)
-	private String street;
+    @Column(name = "street", length = 50, nullable = false)
+    private String street;
 
-	@Column(name = "city", length = 50, nullable = false)
-	private String city;
+    @Column(name = "city", length = 50, nullable = false)
+    private String city;
 
-	@ManyToOne
-	@JoinColumn(name = "user_id")
-	private User user;
+    @ManyToOne
+    @JoinColumn(name = "user_id")
+    private User user;
 
-	public Address() {
-	}
+    public Address() {
+    }
 
-	public int getId() {
-		return id;
-	}
+    public int getId() {
+        return id;
+    }
 
-	public void setId(int id) {
-		this.id = id;
-	}
+    public void setId(int id) {
+        this.id = id;
+    }
 
-	public String getStreet() {
-		return street;
-	}
+    public String getStreet() {
+        return street;
+    }
 
-	public void setStreet(String street) {
-		this.street = street;
-	}
+    public void setStreet(String street) {
+        this.street = street;
+    }
 
-	public String getCity() {
-		return city;
-	}
+    public String getCity() {
+        return city;
+    }
 
-	public void setCity(String city) {
-		this.city = city;
-	}
+    public void setCity(String city) {
+        this.city = city;
+    }
 
-	public User getUser() {
-		return user;
-	}
+    public User getUser() {
+        return user;
+    }
 
-	public void setUser(User user) {
-		this.user = user;
-	}
+    public void setUser(User user) {
+        this.user = user;
+    }
 
-	@Override
-	public String toString() {
-		return "Address [id=" + id + ", street=" + street + ", city=" + city + ", user=" + user + "]";
-	}
+    @Override
+    public String toString() {
+        return "Address [id=" + id + ", street=" + street + ", city=" + city + ", user=" + user + "]";
+    }
 
 }

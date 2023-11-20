@@ -11,7 +11,7 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
-public class AccountRepository implements IAccountRepository{
+public class AccountRepository implements IAccountRepository {
     public List<Account> getAllAccount() throws SQLException {
         String sql = "SELECT * FROM JDBC.Account";
         // Chuẩn bị sẵn 1 stament ( câu lệnh )
@@ -40,7 +40,7 @@ public class AccountRepository implements IAccountRepository{
 
     public void createAccount(Account account) throws SQLException {
         var accountCheck = findByName(account.getUsername());
-        if (accountCheck != null){
+        if (accountCheck != null) {
             System.err.println("User name đã tồn tại!");
             return;
         }
@@ -66,7 +66,7 @@ public class AccountRepository implements IAccountRepository{
 
     public void updateAccount(Account account) throws SQLException {
         var accountCheck = findById(account.getId());
-        if (accountCheck == null){
+        if (accountCheck == null) {
             System.err.println("Id nhập vào ko tồn tại!");
             return;
         }

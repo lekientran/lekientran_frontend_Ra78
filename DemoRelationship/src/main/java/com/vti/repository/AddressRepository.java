@@ -10,52 +10,52 @@ import com.vti.utils.HibernateUtils;
 
 public class AddressRepository {
 
-	private HibernateUtils hibernateUtils;
+    private HibernateUtils hibernateUtils;
 
-	public AddressRepository() {
-		hibernateUtils = HibernateUtils.getInstance();
-	}
+    public AddressRepository() {
+        hibernateUtils = HibernateUtils.getInstance();
+    }
 
-	@SuppressWarnings("unchecked")
-	public List<Address> getAllAddresses() {
+    @SuppressWarnings("unchecked")
+    public List<Address> getAllAddresses() {
 
-		Session session = null;
+        Session session = null;
 
-		try {
+        try {
 
-			// get session
-			session = hibernateUtils.openSession();
+            // get session
+            session = hibernateUtils.openSession();
 
-			// create hql query
-			Query<Address> query = session.createQuery("FROM Address");
+            // create hql query
+            Query<Address> query = session.createQuery("FROM Address");
 
-			return query.list();
+            return query.list();
 
-		} finally {
-			if (session != null) {
-				session.close();
-			}
-		}
-	}
+        } finally {
+            if (session != null) {
+                session.close();
+            }
+        }
+    }
 
-	public Address getAddressByID(int id) {
+    public Address getAddressByID(int id) {
 
-		Session session = null;
+        Session session = null;
 
-		try {
+        try {
 
-			// get session
-			session = hibernateUtils.openSession();
+            // get session
+            session = hibernateUtils.openSession();
 
-			// get department by id
-			Address address = session.get(Address.class, id);
+            // get department by id
+            Address address = session.get(Address.class, id);
 
-			return address;
+            return address;
 
-		} finally {
-			if (session != null) {
-				session.close();
-			}
-		}
-	}
+        } finally {
+            if (session != null) {
+                session.close();
+            }
+        }
+    }
 }

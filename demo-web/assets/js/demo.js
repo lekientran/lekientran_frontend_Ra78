@@ -1,10 +1,10 @@
-$(function(){
+$(function () {
     getListAccount();
     console.log("chạy hàm này đầu tiên khi load JS");
 })
 const baseUrl = "https://653f8d809e8bd3be29e0ca71.mockapi.io/Account";
 
-function getListAccount(){
+function getListAccount() {
     // call API
     $.ajax({
         url: baseUrl,
@@ -21,19 +21,19 @@ function getListAccount(){
             fillAccountToTable(data)
         }
     });
- 
+
 }
 
-function fillAccountToTable(data){
+function fillAccountToTable(data) {
     console.log(data);
     $("tbody").empty()
-    for (let index = 0; index < data.length; index ++){
+    for (let index = 0; index < data.length; index++) {
         const element = data[index];
         console.log(element)
         $("tbody").append(
             `
             <tr>
-                <th scope="row">${index+1}</th>
+                <th scope="row">${index + 1}</th>
                 <td>
                     <img style="width: 120px;"
                         src="${element.avatar}">
@@ -55,30 +55,32 @@ function fillAccountToTable(data){
         )
     }
 }
-function confirmDeleteAccount(id){
+
+function confirmDeleteAccount(id) {
     console.log(id)
     // Gán ID vào 1 biến, localstorage, input
     $("#idAccountToDelete").val(id)
 }
-function deleteAccount(){
+
+function deleteAccount() {
     const accountId = $("#idAccountToDelete").val();
-    alert("Đã xóa thành công account có id là "+ accountId);
+    alert("Đã xóa thành công account có id là " + accountId);
 // call API
-$.ajax({
-    url: baseUrl + "/" + accountId,
-    type: 'DELETE',
-    contentType: 'application/json', // Định nghĩa định dạng dữ liệu truyền vào là json
-    // data: JSON.stringify(request),
-    error: function (err) {
-        // Hành động khi apii bị lỗi
-        console.log(err)
-    },
-    success: function (data) {
-        // Hành động khi xóa thành công
-        $('#exampleModal').modal('hide')
-        getListAccount();
-    }
-});
+    $.ajax({
+        url: baseUrl + "/" + accountId,
+        type: 'DELETE',
+        contentType: 'application/json', // Định nghĩa định dạng dữ liệu truyền vào là json
+        // data: JSON.stringify(request),
+        error: function (err) {
+            // Hành động khi apii bị lỗi
+            console.log(err)
+        },
+        success: function (data) {
+            // Hành động khi xóa thành công
+            $('#exampleModal').modal('hide')
+            getListAccount();
+        }
+    });
 }
 
 

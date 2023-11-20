@@ -7,12 +7,13 @@ import java.sql.SQLException;
 import java.util.Properties;
 
 public class JdbcUtils {
-//    public static void main(String[] args) {
+    //    public static void main(String[] args) {
 //        JdbcUtils.getConect();
 //    }
     static Connection connection = null;
+
     // Tạo 1 method chuyên dùng để conect tới My Sql
-    public static Connection getConnect(){
+    public static Connection getConnect() {
         try {
             Properties properties = new Properties();
             properties.load(new FileInputStream("src/main/resources/db.properties"));
@@ -29,14 +30,14 @@ public class JdbcUtils {
             } else {
                 System.err.println("That bai");
             }
-        } catch (Exception e){
+        } catch (Exception e) {
             System.out.println(e.getMessage());
         }
         return connection;
     }
 
     public static void closeConnection() throws SQLException {
-        if (connection != null){
+        if (connection != null) {
             connection.close();
         }
     }

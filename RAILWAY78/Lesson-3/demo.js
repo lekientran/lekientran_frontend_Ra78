@@ -1,34 +1,39 @@
 console.log(123)
-function Account(id, name, role, age){
+
+function Account(id, name, role, age) {
     this.id = id;
     this.name = name;
     this.role = role;
     this.age = age;
 }
+
 let acc1 = new Account(1, "Tran lekien", "admin", 20)
 console.log(acc1)
 
-function test(){
+function test() {
     console.log("Click")
 }
-function test2(){
+
+function test2() {
     alert("Không được copy!")
 }
-function delete2(){
+
+function delete2() {
     $("#demo").alert("show")
 }
-function login(){
+
+function login() {
 
     let input = document.getElementById("demo").value;
 
     let user = "lkt";
     let pass = "123456";
 
-    if(user!= "ADMIN"){
+    if (user != "ADMIN") {
         alert("Sai user");
         return;
     }
-    if(pass!= "123456"){
+    if (pass != "123456") {
         alert("Sai pass");
         return;
     }

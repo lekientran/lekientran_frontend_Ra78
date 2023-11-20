@@ -8,30 +8,27 @@ import com.vti.repository.AddressRepository;
 import com.vti.repository.UserRepository;
 
 public class Program {
-	public static void main(String[] args) {
-		AddressRepository addressRepository = new AddressRepository();
+    public static void main(String[] args) {
+        AddressRepository addressRepository = new AddressRepository();
 
-		UserRepository userRepository = new UserRepository();
+        UserRepository userRepository = new UserRepository();
 
-		System.out.println("***********GET ALL Users***********");
+        System.out.println("***********GET ALL Users***********");
 
-		List<User> users = userRepository.getAllUsers();
+        List<User> users = userRepository.getAllUsers();
 
-		for (User user : users) {
-			System.out.println(user);
-		}
-
-
-		System.out.println("***********GET ALL ADDRESSES***********");
-
-		List<Address> addresses = addressRepository.getAllAddresses();
-
-		for (Address address : addresses) {
-			System.out.println(address);
-		}
+        for (User user : users) {
+            System.out.println(user);
+        }
 
 
+        System.out.println("***********GET ALL ADDRESSES***********");
 
+        List<Address> addresses = addressRepository.getAllAddresses();
+
+        for (Address address : addresses) {
+            System.out.println(address);
+        }
 
 
 //		UserRepository userRepository = new UserRepository();
@@ -49,7 +46,7 @@ public class Program {
 //			}
 //			System.out.println("");
 //		}
-	}
+    }
 }
 
 

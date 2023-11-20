@@ -21,10 +21,12 @@ function checkLogin() {
 function onclickHomePage() {
     $(".main").load("./assets/html/Home.html");
 }
+
 // load trang create class vào main
 function onclickCreateClass() {
     $(".main").load("./assets/html/Create-New-Class.html");
 }
+
 // load trang all class vào main
 function onclickViewClass() {
     $(".main").load("./assets/html/class-page.html");
@@ -66,7 +68,6 @@ function Logout() {
 }
 
 
-
 function Login() {
     // call API from server
     //lay data tu model ra
@@ -75,7 +76,7 @@ function Login() {
 
 
     //khai báo employee dưới dạng json
-    var admin = { username: username, password: password };
+    var admin = {username: username, password: password};
     console.log(admin);
     // var settings = {
     //     "url": "http://localhost:8080/api/v1/login",

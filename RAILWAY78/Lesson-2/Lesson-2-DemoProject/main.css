@@ -1,10 +1,11 @@
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     font-family: 'Times New Roman', Times, serif;
 }
-button{
+
+button {
     float: right;
     margin-right: 10px;
     padding: 4px 10px;
@@ -13,17 +14,19 @@ button{
     border-radius: 4px;
     cursor: pointer;
 }
-button:hover{
+
+button:hover {
     opacity: 0.8;
     transform: translate(2px, 2px);
 }
-.main{
+
+.main {
     display: flex;
     flex-wrap: wrap;
 }
 
-.card{
-    border: 1px solid black ;
+.card {
+    border: 1px solid black;
     position: relative;
     width: 300px;
     padding: 16px;
@@ -31,24 +34,28 @@ button:hover{
     box-shadow: 1px 1px 10px #333;
     margin: 16px;
 }
+
 .card :hover img {
     transform: translateY(-4px);
     transition: 0.4s;
 }
-.header{
+
+.header {
     width: 100%;
 }
 
-.container{
+.container {
     width: 100%;
     padding-top: 20px;
 }
-.container-pic{
+
+.container-pic {
     width: 100%;
     margin-bottom: 10px;
-    
+
 }
-.container-contain{
+
+.container-contain {
     margin-top: 10px;
     margin-bottom: 10px;
 }

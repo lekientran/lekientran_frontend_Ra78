@@ -10,7 +10,7 @@ import org.hibernate.query.Query;
 import java.sql.SQLException;
 import java.util.List;
 
-public class AccountRepositoryV2 implements IAccountRepository{
+public class AccountRepositoryV2 implements IAccountRepository {
     private Session session;
 
     @Override
@@ -61,7 +61,7 @@ public class AccountRepositoryV2 implements IAccountRepository{
 
         int affectedRows = query.executeUpdate();
         session.getTransaction().commit();
-        if (affectedRows < 1){
+        if (affectedRows < 1) {
             System.err.println("Xoá khôgn thành công!");
         } else {
             System.out.println("Xoá thành công!");

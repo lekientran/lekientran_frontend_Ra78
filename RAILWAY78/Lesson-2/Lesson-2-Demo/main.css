@@ -1,47 +1,55 @@
-table{
-    
+table {
+
     border-collapse: collapse;
 }
-.th{
+
+.th {
     width: 100px;
 }
-table th, table td{
-    border: 2px solid #65416C; 
+
+table th, table td {
+    border: 2px solid #65416C;
     height: 25px;
     padding-left: 10px;
 }
-input{
+
+input {
     height: 20px;
 }
 
 
-h3{
+h3 {
     color: blueviolet;
 }
-.lesson2{
+
+.lesson2 {
     width: 70%;
 
 }
-.lesson-request{
-    color: blue; 
+
+.lesson-request {
+    color: blue;
     text-decoration: underline;
     font-weight: bold;
 }
-.lesson-head{
+
+.lesson-head {
     color: red;
     font-size: 20px;
     background-color: pink;
     text-align: center;
-    
+
 }
-.lesson-contain{
+
+.lesson-contain {
     text-align: center;
-    
+
     color: blue;
     background-color: yellow;
 }
+
 /* Các món ngon Hà Nội */
-.hanoi-food{
+.hanoi-food {
     position: relative;
     width: 900px;
     height: 400px;
@@ -51,62 +59,70 @@ h3{
     /* background-color: #EDBBA0; */
     font-family: 'Times New Roman', Times, serif;
 }
-.food-head{
+
+.food-head {
     font-size: 35px;
     font-weight: bold;
     color: #9B5027;
     text-align: center;
     padding-top: 20px;
-    
+
 }
 
-.tr-1{
+.tr-1 {
     background-color: aliceblue;
 }
-.tr-2{
+
+.tr-2 {
     background-color: #EDBBA0;
 }
 
-.food-table{
+.food-table {
     width: 30%;
     border: 10px;
     border-color: #65416C;
     margin-left: 50%;
-    
+
 }
-.food-table-head{
+
+.food-table-head {
     font-size: 20px;
     color: aliceblue;
     background-color: #9B5027;
 }
 
 /* Promotion */
-.promotion{
+.promotion {
     font-family: 'Times New Roman', Times, serif;
     margin: 50px;
 }
-.promotion-table{
-    background-color:#EDBBA0;
+
+.promotion-table {
+    background-color: #EDBBA0;
     width: 80%;
     color: #9B5027;
-    
+
 }
-.promotion-table th, .promotion-table td{
+
+.promotion-table th, .promotion-table td {
     border-color: #9B5027;
     height: 30px;
 }
+
 /* Công ty Hoa tươi nhân ái */
-.flower-shop{
+.flower-shop {
     width: 100%;
     height: 700px;
     background-color: gainsboro;
 
 }
-.flower-heading{
+
+.flower-heading {
     color: purple;
     font-size: x-large;
 }
-.flower-container{
+
+.flower-container {
     width: 100%;
 }
 
