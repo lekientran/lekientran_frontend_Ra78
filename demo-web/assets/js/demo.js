@@ -2,12 +2,17 @@ $(function () {
     getListAccount();
     console.log("chạy hàm này đầu tiên khi load JS");
 })
+
+
+
+
 const baseUrl = "https://653f8d809e8bd3be29e0ca71.mockapi.io/Account";
 
 function getListAccount() {
     // call API
+    let param = `?page=${page}&size=${size}`
     $.ajax({
-        url: baseUrl,
+        url: baseUrl + "/get-all-v2" + param,
         type: 'GET',
         contentType: 'application/json', // Định nghĩa định dạng dữ liệu truyền vào là json
         // data: JSON.stringify(request),
@@ -18,7 +23,7 @@ function getListAccount() {
         success: function (data) {
             // Hành động khi thành công
             console.log(data)
-            fillAccountToTable(data)
+            fillAccountToTable(data.content)
         }
     });
 
